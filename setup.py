@@ -78,8 +78,6 @@ setup(
         'click',
         'pyyaml',
         'bmt',
-        'SPARQLWrapper',
-        'ensmallen_graph==0.4.3',
         'elasticsearch',
         'sphinx',
         'sphinx_rtd_theme',
