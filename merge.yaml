@@ -4,7 +4,7 @@ configuration:
   checkpoint: false
 
 merged_graph:
-  name: KG-COVID-19 Graph
+  name: kg-daniel
   source:
     drug-central:
       input:
@@ -51,36 +51,6 @@ merged_graph:
         filename:
           - data/transformed/ttd/nodes.tsv
           - data/transformed/ttd/edges.tsv
-    zhou-host-proteins:
-      input:
-        format: tsv
-        filename:
-          - data/transformed/zhou_host_proteins/nodes.tsv
-          - data/transformed/zhou_host_proteins/edges.tsv
-    SciBite-CORD-19:
-      input:
-        format: tsv
-        filename:
-          - data/transformed/SciBite-CORD-19/nodes.tsv
-          - data/transformed/SciBite-CORD-19/edges.tsv
-    sars-cov-2-gene-annot:
-      input:
-        format: tsv
-        filename:
-          - data/transformed/sars_cov_2_gene_annot/nodes.tsv
-          - data/transformed/sars_cov_2_gene_annot/edges.tsv
-    intact:
-      input:
-        format: tsv
-        filename:
-          - data/transformed/intact/nodes.tsv
-          - data/transformed/intact/edges.tsv
-    chembl:
-      input:
-        format: tsv
-        filename:
-          - data/transformed/ChEMBL/nodes.tsv
-          - data/transformed/ChEMBL/edges.tsv
     gene-ontology:
       input:
         format: tsv
@@ -105,12 +75,6 @@ merged_graph:
         filename:
           - data/transformed/ontologies/hp_nodes.tsv
           - data/transformed/ontologies/hp_edges.tsv
-    go-cams:
-      input:
-        format: tsv
-        filename:
-          - data/transformed/GOCAMs/GOCAMs_nodes.tsv
-          - data/transformed/GOCAMs/GOCAMs_edges.tsv
   operations:
     - name: kgx.graph_operations.summarize_graph.generate_graph_stats
       args:
