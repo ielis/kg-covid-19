@@ -77,7 +77,7 @@ class DiseaseAnnotations(Transform):
                 nodes.add(node)
 
                 edge_id = 'urn:uuid:' + str(uuid.uuid3(uuid.NAMESPACE_DNS,
-                                                       '-'.join([disease_id, hpo_id, phenotype_is_present])))
+                                                       '-'.join([disease_id, hpo_id, str(phenotype_is_present)])))
                 edge = KgxEdge(id=edge_id, subject=disease_id, predicate=has_phenotype, object=hpo_id,
                                relation=has_symptom, primary_knowledge_source=provided_by,
                                category=phenotype_to_disease_association, publications=row['Reference'])
