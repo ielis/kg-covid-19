@@ -152,6 +152,9 @@
 -
   url: http://kg-hub.berkeleybop.io/frozen_incoming_data/chebi.json.gz
   local_name: chebi.json.gz
+-
+  url: http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa
+  local_name: phenotype.hpoa
 
 #
 # GO-CAM
