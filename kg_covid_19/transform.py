@@ -16,17 +16,13 @@ from kg_covid_19.transform_utils.scibite_cord import ScibiteCordTransform
 from kg_covid_19.transform_utils.string_ppi import StringTransform
 from kg_covid_19.transform_utils.ttd.ttd import TTDTransform
 from kg_covid_19.transform_utils.zhou_host_proteins.zhou_transform import ZhouTransform
+from kg_covid_19.transform_utils.disease_annotations.disease_annotations import DiseaseAnnotations
 
 
 DATA_SOURCES = {
-    'DrugCentralTransform': DrugCentralTransform,
-    'TTDTransform': TTDTransform,
-    'StringTransform': StringTransform,
-    'PharmGKB': PharmGKB,
-    'GoTransform': OntologyTransform,
-    'HpTransform': OntologyTransform,
-    'MondoTransform': OntologyTransform,
-    'ChebiTransform': OntologyTransform,
+    'GocamTransform': GocamTransform,
+    'ChemblTransform': ChemblTransform,
+    'DiseaseAnnotations': DiseaseAnnotations
 }
 
 
