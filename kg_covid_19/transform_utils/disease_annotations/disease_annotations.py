@@ -22,7 +22,9 @@ class DiseaseAnnotations(Transform):
         self._file_header = ['DatabaseID', 'DiseaseName', 'Qualifier', 'HPO_ID',
                              'Reference', 'Evidence', 'Onset', 'Frequency', 'Sex',
                              'Modifier', 'Aspect', 'Biocuration']
-        # TODO(ielis) - think about we add terms that are excluded/not present in the disease
+        # TODO(ielis): think about:
+        #  - do we add terms that are excluded/not present in the disease?
+        #  - do we use all Aspect types, or only `P`?
         self._add_excluded_phenotype = False
         super().__init__(source_name, input_dir, output_dir)
 
@@ -35,7 +37,7 @@ class DiseaseAnnotations(Transform):
 
     def parse(self, data_file: str, compression: Optional[str] = None):
 
-        #  TODO(jreese) - to check if these values are OK
+        #  TODO(justaddcoffee) - to check if these values are OK
         category = 'biolink:Disease'
         provided_by = 'HPO:hpoa'
         has_phenotype = 'biolink:has_phenotype'
