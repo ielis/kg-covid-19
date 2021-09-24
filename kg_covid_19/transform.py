@@ -19,20 +19,14 @@ from kg_covid_19.transform_utils.zhou_host_proteins.zhou_transform import ZhouTr
 
 
 DATA_SOURCES = {
-    'ZhouTransform': ZhouTransform,
     'DrugCentralTransform': DrugCentralTransform,
     'TTDTransform': TTDTransform,
     'StringTransform': StringTransform,
-    'ScibiteCordTransform': ScibiteCordTransform,
     'PharmGKB': PharmGKB,
-    'SARSCoV2GeneAnnot': SARSCoV2GeneAnnot,
-    'IntAct': IntAct,
     'GoTransform': OntologyTransform,
     'HpTransform': OntologyTransform,
     'MondoTransform': OntologyTransform,
     'ChebiTransform': OntologyTransform,
-    'GocamTransform': GocamTransform,
-    'ChemblTransform': ChemblTransform
 }
 
 
