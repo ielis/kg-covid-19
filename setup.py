@@ -45,13 +45,13 @@ extras = {
 }
 
 setup(
-    name='kg_covid_19',
+    name='kg_daniel',
     version=__version__,
-    description='KG hub for emerging viruses',
+    description='',
     long_description=long_description,
-    url='https://github.com/justaddcoffee/kg-emerging-viruses',
-    author='justaddcoffee+github@gmail.com',
-    author_email='Justin Reese',
+    url='',
+    author='',
+    author_email='',
     python_requires='>=3.7',
 
     # choose your license
