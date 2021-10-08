@@ -87,12 +87,12 @@ merged_graph:
 #        filename:
 #          - data/transformed/ontologies/go-plus_nodes.tsv
 #          - data/transformed/ontologies/go-plus_edges.tsv
-    mondo-ontology:
-      input:
-        format: tsv
-        filename:
-          - data/transformed/ontologies/mondo_nodes.tsv
-          - data/transformed/ontologies/mondo_edges.tsv
+#    mondo-ontology:
+#      input:
+#        format: tsv
+#        filename:
+#          - data/transformed/ontologies/mondo_nodes.tsv
+#          - data/transformed/ontologies/mondo_edges.tsv
 #    chebi:
 #      input:
 #        format: tsv
