@@ -1,4 +1,6 @@
 import json
+import os.path
+
 import compress_json  # type: ignore
 from typing import Optional, Set, Dict, List
 from tqdm import tqdm # type: ignore
@@ -46,10 +48,12 @@ class ChemblTransform(Transform):
         self.edge_header = ['id', 'subject', 'predicate', 'object', 'relation', 'provided_by', 'type']
 
         if chembl_data_files is None:
-            chembl_data_files = {'molecules_data': 'data/raw/chembl_molecule_records.json',
-                          'assay_data': 'data/raw/chembl_assay_records.json',
-                          'document_data': 'data/raw/chembl_document_records.json',
-                          'activity_data': 'data/raw/chembl_activity_records.json'}
+            chembl_data_files = {
+                'molecules_data': os.path.join(self.input_base_dir, 'chembl_molecule_records.json'),
+                'assay_data': os.path.join(self.input_base_dir, 'chembl_assay_records.json'),
+                'document_data': os.path.join(self.input_base_dir, 'chembl_document_records.json'),
+                'activity_data': os.path.join(self.input_base_dir, 'chembl_activity_records.json')
+            }
 
         # ChEMBL molecules
         molecules_data = self.read_json(chembl_data_files['molecules_data'])
