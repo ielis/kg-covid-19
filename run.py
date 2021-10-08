@@ -60,6 +60,8 @@ def transform(*args, **kwargs) -> None:
     """
 
     # call transform script for each source
+    print(f'Using input from `{kwargs["input_dir"]}`')
+    print(f'Storing output to `{kwargs["output_dir"]}`')
     kg_transform(*args, **kwargs)
 
     return None
